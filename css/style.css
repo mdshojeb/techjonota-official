@@ -1,0 +1,872 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;500&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+}
+/******** common css********/
+body{
+	font-family: 'Arimo', sans-serif;
+	border-bottom: 4px solid #41B2F4;
+	box-sizing: border-box;
+}
+/*vertical scrollbar styling*/
+/*::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #41B2F4; 
+  border-radius: 5px;
+}*/
+
+/*body horizontal scrollbar styling*/
+.body-scroller {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background-color: #f1f1f1;
+}
+
+/* The progress container (grey background) */
+.progress-container {
+  width: 100%;
+  height: 5px;
+  background: #41B2F4;
+}
+
+/* The progress bar (scroll indicator) */
+.progress-bar {
+  height: 5px;
+  background: #ED2F26;
+  width: 0%;
+}
+.scroll-to-top i{
+	position: fixed;
+	right: 15px;
+	bottom: 20px;
+	justify-content: center;
+	width: 35px;
+    height: 35px;
+    background: #41B2F4;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 35px;
+    color: #fff; 
+    display: none;
+}
+
+
+/******** start header section ********/
+.tech_header{
+	padding-top: 20px 0;
+	display: block;
+	position: relative;
+	z-index: 1000;
+}
+.section_title{
+	text-align: center;
+	padding-bottom: 30px;
+}
+.section_title h2{
+	color: #444;
+	font-size:26px;
+	font-weight: 600;
+	margin-bottom: -5px;
+}
+.section_title span{
+	width: 100px;
+	height: 3px;
+	background: #41B2F4;
+	display: inline-block;
+}
+.tech_main_logo img{
+	padding-top: 30px;
+	height: 100px;
+}
+.tech_header_contact{
+	padding-top: 40px;
+	display: block;
+}
+.tech_header_contact ul{
+	overflow: hidden;
+	padding-left: 300px;
+	display: flex;
+}
+.tech_header_contact ul li{
+	list-style: none;
+	text-decoration: none;
+	padding-left: 10px;
+}
+.tech_header_contact ul li a{
+	text-decoration: none;
+	color: #444;
+	font-family: 'Arimo', sans-serif;
+	font-weight: 700;
+	font-size: 15px;
+}
+.tech_header_contact ul li i{
+	display: flex;
+	justify-content: center;
+	width: 50px;
+    height: 50px;
+    background: #41B2F4;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+}
+.tech_header_social-icon{
+	padding-top: 30px;
+}
+.tech_header_social-icon h5{
+	text-transform: capitalize;
+	text-align: center;
+	color: #444;
+    font-family: 'Arimo', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+}
+.tech_header_social-icon ul{
+	display: flex;
+	justify-content: center;
+
+}
+.tech_header_social-icon ul li{
+	list-style: none;
+	padding: 0 5px;
+	text-decoration: none;
+}
+.tech_header_social-icon ul li a{
+	text-decoration: none;
+
+}
+.tech_header_social-icon ul li i{
+	display: flex;
+	justify-content: center;
+	width: 30px;
+    height: 30px;
+    background: #41B2F4;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+}
+.tech_header_social-icon i:hover{
+	background-color: #2ecc71;
+	transition: .5s;
+}
+/******** Tech menu section ********/
+.tech_menu{
+	background: #fff;
+    box-shadow: 0 0 20px rgb(221 221 221 / 59%);
+    margin-top: 30px;
+    z-index:  !important;
+}
+.tech_main_menu{
+	text-align: center;
+	padding: 15px 0;
+	display: block;
+	background: #fff;
+    box-shadow: 0 0 20px rgb(221 221 221 / 59%);
+
+}
+.navbar-nav {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    padding-left: 20%;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: #444;
+    font-size: 19px;
+    font-weight: 500;
+    text-transform: capitalize;
+    font-family: 'Arimo', sans-serif;
+    padding: 0 20px;
+}
+.navbar-light .navbar-nav .nav-link:hover{
+	color: #41B2F4;
+	transition: .7s;
+}
+
+
+/*=========================
+making custom dropdown menu
+===========================*/
+.mydropdown{
+	position: relative;
+	
+}
+.mydropdown:hover .my-dropdown-menu{
+	display: block;
+	animation: fade .3s ease-in-out;
+}
+.mydropdown:hover .dropdown-click img{
+	transform: rotate(180deg);
+}
+.mydropdown .dropdown-click{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+}
+.mydropdown .dropdown-click span{
+	color: #444;
+    font-size: 19px;
+    font-weight: 500;
+    text-transform: capitalize;
+    font-family: 'Arimo', sans-serif;
+    padding: 0 10px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.mydropdown .dropdown-click img{
+	width: 14px;
+	margin-top: -3px;
+	transition: transform .5s ease;
+}
+
+.mydropdown .my-dropdown-menu{
+	width: 400px;
+	height: auto;
+	display: none;
+	position: absolute;
+	top: 10;
+	left: 0;
+	z-index: 9999;
+	transition: 2s ease;
+	
+}
+.mydropdown .my-dropdown-menu ul{
+	padding: 10px 15px;
+	text-align: left;
+	background-color: white;
+}
+.mydropdown .my-dropdown-menu ul li{
+	list-style: none;
+	padding: 5px 0;
+}
+.mydropdown .my-dropdown-menu ul li a{
+	color: #444;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-family: 'Arimo', sans-serif;
+}
+
+.mydropdown .my-dropdown-menu ul li a:hover{
+	color: #41B2F4;
+	transition: .7s;
+}
+/******** slider section ********/
+/******** pogo slider section ********/
+.pogoSlider--dirCenterHorizontal .pogoSlider-dir-btn {
+    display: none;
+}
+.pogoSlider-nav-btn {
+    display: none;
+}
+.tech_slider{}
+.tech_main_slider{
+	padding-top: 10px;
+
+}
+/*======================
+  about-section
+  =====================*/
+.tech_about-section{
+	padding-top: 100px;
+}
+
+.tech_about-section .section_title h2{
+	color: #444;
+	font-size:32px;
+	font-weight: 400;
+	margin-bottom: -5px;
+}
+.tech_about-section-title span{
+	width: 100px;
+	height: 3px;
+	background: #41B2F4;
+	display: inline-block;
+}
+.tech_about-section-title p{
+	color: #777777;
+	font-size: 13px;
+	font-weight: 400;
+}
+.tech_about-image{
+	overflow: hidden;
+}
+.tech_about-title{
+	padding: 10px;
+}
+.tech_about-title h2{
+	color: #444;
+	font-size:24px;
+	font-weight:400;
+}
+.tech_about-title p{
+	color: #666666;
+	font-size: 16px;
+}
+
+
+/*===================================== 
+Services section all style started here 
+=====================================*/
+.tech-services{
+	margin-top: 6rem;
+}
+.iconbox{
+    position:relative;
+    width:33.3%;
+    height:120px;
+    padding:0 20px;
+    display: flex;
+    float:left;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border:1px solid rgba(18, 148, 255, 0.11);
+    /* border-radius: 4px; */
+    transition: 0.5s;
+}
+.iconbox:hover{
+    box-shadow: 0 10px 30px rgba(0,0,0,.1);
+    cursor:pointer;
+}
+.iconbox.active{
+    background-color:#35AEFB;
+    color:#fff;
+}
+
+.iconbox.active img{
+    filter:grayscale(0);
+    transform: scale(0.9);
+    transition: 0.5s;
+}
+.iconbox img{
+    max-width: 70%;
+    filter:grayscale(1);
+    transition:0.5s;
+    transform:scale(0.8);
+    display: block;
+    margin:0 auto;
+}
+.iconbox p{
+    font-size: 12px;
+    text-align: center;
+}
+
+.content-text{
+    padding: 20px 10px;
+}
+.contentbox .content-text h2{
+    font-size: 18px;
+}
+.contentbox .content-img{
+	background-color: #F5F5F5;
+}
+.contentbox .content-img img{
+    /*height: 100%;*/
+
+}
+
+.contentbox{
+    overflow:hidden; 
+    display: none;
+    transition: max-height 0.5s ease;
+}
+.contentbox.active{
+    display: block;
+    max-height: 400px;
+    animation: fadeleft 0.8s ease-in-out;
+}
+
+
+@keyframes fadeleft{
+    from{
+        opacity:0;
+        transform:translateX(-15px);
+    }
+    to{
+        opacity:1;
+        transform:translateX(0)
+    }
+}
+
+
+.icon-wraper{
+    margin: 0;
+    padding: 0;
+}
+.content-wraper{
+    margin: 0;
+    padding: 0;
+    background-color: #F5F5F5;
+}
+
+/*==============================
+ facilities-section
+===============================*/
+.facilities-section{
+	padding-top: 100px;
+}
+.facilities-section-title{
+	margin-bottom: 40px;
+}
+.facilities-section-title h1{
+	color: #5b6b80;
+	font-size:32px;
+	font-weight: 400;
+	margin-bottom: -5px;
+}
+.facilities-section-title span{
+	width: 150px;
+	height: 3px;
+	background: #41B2F4;
+	display: inline-block;
+}
+.facilities-section-title p{
+	color: #777777;
+	font-size: 13px;
+	font-weight: 400;
+}
+.facilities-item-cnotent h2{
+	color: #222222;
+	font-size:24px;
+	font-weight:400;
+	margin: 20px 0;
+}
+.facilities-item-cnotent p{
+	color: #666666;
+	font-size: 16px;
+}
+
+/*===================================== 
+FAQa section all style started here 
+=====================================*/
+
+.faq-wrap{
+    padding-top:30px;
+}
+.faq{
+    padding-top: 5px;
+    padding-bottom: 3px;
+    border-bottom: 2px solid#4ca2f70a;
+    cursor: pointer;
+}
+
+.faq.active .faq-answer{
+    max-height: 300px;
+    animation: fade 1s ease-in-out;
+}
+.faq .faq-question{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.faq.active .faq-question{
+    z-index: 99999999999 !important;
+    background: #fff;
+    box-shadow: 0 0 20px rgb(221 221 221 / 59%);
+    transition: all linear .4s;
+}
+.faq .faq-question h3{
+    font-size: 18px;
+    font-weight: 500;
+    padding-top: 2px;
+    margin-bottom:0;
+    padding-bottom:0
+}
+.faq img{
+    width: 18px;
+    opacity: 0.6;
+    transition: transform 0.8s ease;
+}
+.faq.active  img{
+    transform: rotate(180deg);
+}
+.faq .faq-answer{
+    max-height: 0;
+    overflow:hidden;
+    transition: max-height 1s ease;
+}
+
+.faq .faq-answer p{
+    line-height: 1.6;
+    font-size: 16px;
+    padding-left:10px;
+    padding-right: 10px;
+}
+
+@keyframes fade{
+    from{
+        opacity:0;
+        transform:translateY(-15px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0)
+    }
+}
+
+
+/*We are selling section */
+.sell-card{
+	/*border: 2px solid #007BBC;*/
+	overflow: hidden;
+	border-radius: 15px;
+}
+.sell-card-img{
+	heigh: 170px;
+	overflow: hidden;
+	transition: 2s ease;
+}
+.sell-card-img img{
+	width: 100%;
+	height: auto;
+	transition: transform .8s ease-in-out;
+}
+.sell-card:hover{
+	background: #fff;
+    box-shadow: 0 0 20px rgb(221 221 221 / 59%);
+    transition: all linear .4s;
+}
+.sell-card:hover .sell-card-img img{
+	transform: scale(1.2);
+}
+
+.sell-card h2{
+	font-size: 18px;
+	color: #444;
+	font-weight: 500;
+}
+.sell-card p{
+	font-size: 14px;
+}
+.sell-card-btn{
+	background-color: #39B8FB;
+	font-size: 16px;
+	font-weight: 500;
+	color: #fff;
+	padding:5px 10px;
+	border: 0;
+	border-radius: 10px;
+}
+.sell-card-footer{
+	display: flex;
+	justify-content: space-between;
+}
+
+
+/*==================================
+testimonial section started here
+===================================*/
+
+/*==================================
+start footer section
+===================================*/
+.tech_footer{
+	padding: 50px 0;
+	background: #f5f5f5;
+	justify-content: center;
+	width: 100%;
+	margin: 0 auto;
+}
+.tech_footer_sciosal{
+	text-align: center;
+}
+.tech_footer_logo{}
+.tech_footer_logo img{
+	width: 80%;
+	height: 60%;
+}
+.tech_footer_logo h4 {
+    font-size: 15px;
+    padding: 15px 0;
+    color: #444444;
+}
+.tech_footer_icon{}
+.tech_footer_icon ul{
+	display: flex;
+	align-items: center;
+	padding-left: 20%;
+
+}
+.tech_footer_icon ul li{
+	list-style: none;
+	padding: 5px;
+}
+.tech_footer_icon ul li a{
+	list-style: none;
+	text-decoration: none;
+}
+.tech_footer_icon ul li i{
+	display: flex;
+	justify-content: center;
+	width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    border: 1px solid #bdc3c7;
+    text-decoration: none;
+    color: #2c3e50;
+}
+.tech_footer_icon i:hover{
+	background-color:#41B2F4;
+    cursor: pointer;
+    color: #fff;
+    transition: .7s;
+}
+/*==================================
+footer contact 
+===================================*/
+.tech_footer_contact{
+padding-left: 20px;
+}
+.tech_footer_contact h5{
+	color: #444;
+    font-family: Arimo, sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    text-transform: capitalize;
+    padding-bottom: 10px;
+}
+.tech_footer_contact ul{
+
+	display: flex;
+	padding-left: 0px;
+
+}
+.tech_footer_contact ul li{
+	list-style: none;
+	text-decoration: none;
+	
+}
+.tech_footer_contact ul li a{
+	font-size: 16px;
+    color: #444;
+    font-family: Arimo, sans-serif !important;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 33px;
+    transition: all linear .3s;
+    text-decoration: none;
+}
+.tech_footer_contact ul li i{
+	display: flex;
+	justify-content: center;
+	width: 50px;
+    height: 50px;
+    background: #41B2F4;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    color: #fff; 
+}
+/*==================================
+footer service area
+===================================*/
+.tech_footer_service{
+	padding-left: 20%;
+}
+.tech_footer_service h5{
+	color: #444;
+    font-family: Arimo, sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    text-transform: capitalize;
+    padding-bottom: 10px;
+}
+.tech_footer_service ul{
+	padding-left: 0;
+}
+.tech_footer_service ul li{
+	list-style: none;
+	padding: 5px 0;
+}
+.tech_footer_service ul li a{
+	font-size: 16px;
+    color: #444;
+    font-family: Arimo, sans-serif !important;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 33px;
+    transition: all linear .3s;
+    text-decoration: none;
+}
+.tech_footer_service ul li a:hover{
+    cursor: pointer;
+    color: #41B2F4;
+    transition: .7s;
+}
+/*==================================
+footer quick link
+===================================*/
+.tech_footer_link{
+	padding-left: 20%;
+}
+.tech_footer_link h5{
+	color: #444;
+    font-family: Arimo, sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    text-transform: capitalize;
+    padding-bottom: 10px;
+}
+.tech_footer_link ul{
+	padding-left: 0;
+}
+.tech_footer_link ul li{
+	list-style: none;
+	padding: 2px 0;
+}
+.tech_footer_link ul li a{
+	font-size: 16px;
+    color: #444;
+    font-family: Arimo, sans-serif !important;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 33px;
+    transition: all linear .3s;
+    text-decoration: none;
+    line-height:2px;
+}
+.tech_footer_link ul li a:hover{
+    cursor: pointer;
+    color: #41B2F4;
+    transition: .7s;
+}
+
+/*=========================
+About Us Page Styling
+==========================*/
+.banner-section{
+	width: 100%;
+	height: 200px;
+	background: #F5F5F5;
+}
+.banner-section h3{
+	font-weight: 600;
+}
+.banner-section p{
+	font-size: 18px;
+	line-height: 25px;
+	margin-top: 12px;
+}
+.banner-line{
+	width: 100px;
+	height: 5px;
+	background: #41B2F4;
+	display: block;
+	margin-top: -5px;
+	border-radius: 10px;
+	margin: 0 auto;
+}
+
+.our-vision-text h4{
+	font-weight: 500;
+}
+.title-line{
+	margin-top: -5px;
+	margin-bottom: 5px;
+	width: 80px;
+	height: 3px;
+	background: #3DB9FE;
+	display: block;
+
+}
+.our-vision-text .our-vision-detail{
+	margin-top: 30px;
+
+}
+
+.our-core-feature .our-core-feature-title{
+	font-weight: 500;
+}
+.feture-single i{
+	font-size: 30px;
+	color: #41B2F4;
+}
+.feture-single .feture-single-detail h5{
+	font-size: 18px;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+
+/*Web Development Service Page*/
+.web-development-intro{
+
+}
+.service-item{
+	padding: 0 20px;
+}
+.service-item-ecom,.service-item-laravel,.service-item-cms{
+	background: #41B2F4;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10px 0 0 10px;
+	padding: 10px;
+}
+.service-item-laravel{
+	background: #EBF2FF;
+}
+.service-item-cms{
+	background: #FAF5DD;
+}
+
+.service-item-detail{
+	background: #F8F8F8;
+	padding-left: 20px;
+	padding-top: 20px;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+.service-item-detail h4{
+	color: ;
+}
+.service-item-detail p{
+	font-size: 16px;
+	line-height: 25px;
+}
+
+/*Technology Expertise*/
+.tech-expertise{
+	text-align: center;
+	margin-top: 50px;
+}
+.tech-detail-wraper{
+	padding: 0 200px;
+}
+.tech-expertise .tech-detail-single img{
+	filter: grayscale(1);
+	transition: .5s ease-in-out;
+}
+.tech-expertise .tech-detail-single:hover img{
+	transform: scale(1.1);
+	filter: grayscale(0);
+}
+.tech-expertise .tech-detail span{
+
+}
+
+.development-process{
+	margin-top: 50px;
+}
